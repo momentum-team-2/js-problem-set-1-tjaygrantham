@@ -1,11 +1,7 @@
 // 1. Set the variable `givenName` to the string "Addison".
 
-let givenName = 'Addison'
-
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
-
-let candies = 20
 
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
@@ -52,37 +48,11 @@ let candies = 20
 // 10. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
-function sum (numbers) {
-  let total = 0
-  for (let num of numbers) {
-    total += num
-  }
-
-  return total
-}
-
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
-function average (numbers) {
-  if (numbers.length === 0) { return }
-  return sum(numbers) / numbers.length
-}
-
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
-
-function minimum (numbers) {
-  if (numbers.length === 0) { return }
-
-  let min = Infinity
-  for (let num of numbers) {
-    if (num < min) {
-      min = num
-    }
-  }
-  return min
-}
 
 // 13. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -107,23 +77,3 @@ function minimum (numbers) {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
-
-function selectionSort (numbers) {
-  // copy the array
-  numbers = numbers.slice(0)
-  // create new array
-  const sorted = []
-  // while numbers in array
-  while (numbers.length > 0) {
-    // find smallest number in array
-    let min = minimum(numbers)
-
-    // remove that number from the array
-    let idx = numbers.indexOf(min)
-    numbers.splice(idx, 1)
-
-    // push that number into new array
-    sorted.push(min)
-  }
-  return sorted
-}

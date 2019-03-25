@@ -1,8 +1,5 @@
 # JavaScript Practice
 
-## Skills
-
-TODO
 
 ## Directions
 
