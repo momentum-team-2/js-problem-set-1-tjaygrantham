@@ -130,63 +130,14 @@ describe('multigreeting', function () {
   })
 })
 
-describe('sum', function () {
-  it('returns 0 for an empty array', function () {
-    assert.equal(0, sum([]))
+describe('gcd', function () {
+  it('should find the gcd of two equal numbers', function () {
+    assert.equal(81, gcd(81, 81))
   })
-
-  it('works with only one number in the array', function () {
-    assert.equal(5, sum([5]))
+  it('should find the gcd of two even numbers with no other common divisors', function () {
+    assert.equal(2, gcd(14, 26))
   })
-
-  it('adds up all the numbers in an array', function () {
-    assert.equal(15, sum([1, 2, 3, 4, 5]))
-  })
-})
-
-describe('average', function () {
-  it('returns undefined for an empty array', function () {
-    assert.isUndefined(average([]))
-  })
-
-  it('works with only one number in the array', function () {
-    assert.equal(5, average([5]))
-  })
-
-  it('returns the average of an array', function () {
-    assert.equal(3, average([1, 2, 3, 4, 5]))
-  })
-})
-
-describe('minimum', function () {
-  it('returns undefined for an empty array', function () {
-    assert.isUndefined(minimum([]))
-  })
-
-  it('returns the number for an array with one number', function () {
-    assert.equal(1, minimum([1]))
-  })
-
-  it('returns the the minimum number in an array of numbers', function () {
-    assert.equal(1, minimum([2, 1, 3]))
-    assert.equal(-4, minimum([7, 31, -4, 2]))
-  })
-})
-
-describe('selectionSort', function () {
-  it('returns an empty array for an empty array', function () {
-    assert.deepEqual([], selectionSort([]))
-  })
-
-  it('returns the same array for an array with one number', function () {
-    assert.deepEqual([2], selectionSort([2]))
-  })
-
-  it('returns the same array for a sorted array', function () {
-    assert.deepEqual([2, 4, 10, 12], selectionSort([2, 4, 10, 12]))
-  })
-
-  it('returns a sorted array', function () {
-    assert.deepEqual([2, 4, 10, 12], selectionSort([4, 2, 12, 10]))
+  it('should find the gcd of two numbers with a common divisor', function () {
+    assert.equal(6, gcd(48, 18))
   })
 })
