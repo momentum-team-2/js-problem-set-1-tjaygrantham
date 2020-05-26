@@ -17,33 +17,28 @@ function greeting(name){
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 function isOdd(num){
-    const result = num % 2;
-    if(result == 1 || result == -1)
-        return true;
-    return false;
+    return num % 2 == 1 || num % 2 == -1;
 }
 
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
 function isEven(num){
-    if(num % 2 == 0)
-        return true;
-    return false;
+    return num % 2 == 0;
 }
 
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
 function fahrenheitToCelsius(temp){
-    return (temp-32)*5/9;
+    return (temp - 32) * 5 / 9;
 }
 
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
 function celsiusToFahrenheit(temp){
-    return temp*9/5+32;
+    return temp * 9 / 5 + 32;
 }
 
 // 7. Create a function called fahrenheitToKelvin that takes a
@@ -60,7 +55,10 @@ function fahrenheitToKelvin(temp){
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
 function lesser(num1, num2){
-    return Math.min(num1, num2);
+    if(num1 > num2)
+        return num2
+    else
+        return num1;
 }
 
 // 9. Create a function called multigreeting that takes a name
